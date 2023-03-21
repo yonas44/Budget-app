@@ -11,6 +11,20 @@
   </head>
 
   <body>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+    <header>
+        <ul>
+          <li>
+            <%= link_to "Home", groups_path %>
+          </li>
+        </ul>
+      </header>
+      <% if user_signed_in? %>
+        <div class="welcome">
+          <%= button_to "Logout", destroy_user_session_path, method: :delete %> 
+        </div>
+      <% end %>
     <%= yield %>
   </body>
 </html>

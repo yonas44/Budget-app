@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<% if @groups.empty? %>
+  <p class="no-groups-msg"><%= image_tag ("no-content.png"), id: 'no-content-img' %>There are no categories added currently</p>
+<% else %>
+  <h1>List of categories</h1>
+  <div id="groups">
+    <% @groups.each do |group| %>
+      <a href= <%= group_purchases_path(group) %> class="category-card"><%= render group %></a>
+    <% end %>
+  </div>
+<% end %>
+
+<%= link_to "New group", new_group_path %>
