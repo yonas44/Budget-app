@@ -1,9 +1,11 @@
-<h1>New group</h1>
-
-<%= render "form", group: @group %>
-
-<br>
-
-<div>
-  <%= link_to "Back to groups", groups_path %>
+<header class="navigation">
+  <a href=<%= groups_path %> id="back-btn"><i class="fa-solid fa-arrow-left"></i></a>
+  <h2>Categories</h2>
+  <a href="#"></a>
+</header>
+<div class="category-form">
+  
+  <h3>New category</h3>
+  
+  <%= render "form", group: @group %>
 </div>

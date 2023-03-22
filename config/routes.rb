@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
   devise_for :users
   
-  root "groups#index"
-  resources :groups, only: %i[index create new update] do
+  root "welcome#home"
+  get '/groups/all' => "groups#index"
+  resources :groups, only: %i[index create new update all] do
     resources :purchases, only: %i[index create new show]
   end
   resources :users

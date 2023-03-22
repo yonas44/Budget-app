@@ -11,20 +11,18 @@
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    <header>
-        <ul>
-          <li>
-            <%= link_to "Home", groups_path %>
-          </li>
-        </ul>
-      </header>
-      <% if user_signed_in? %>
-        <div class="welcome">
-          <%= button_to "Logout", destroy_user_session_path, method: :delete %> 
+    <div class="app">
+      <% flash.each do |key, value| %>
+        <div class="alert <%= key %>">
+          <%= value %>
         </div>
+        <% end %>
+    
+      <%= yield %>
+      <% if user_signed_in? %>
+        <%= button_to "Logout", destroy_user_session_path, method: :delete, id: "destroy-session" %>
       <% end %>
-    <%= yield %>
+      <footer>Created by Yonas Tesfu &copy 2023</footer>
+    </div>
   </body>
 </html>
