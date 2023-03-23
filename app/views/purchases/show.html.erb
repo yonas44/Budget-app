@@ -1,10 +1,7 @@
-<p style="color: green"><%= notice %></p>
+<header class="navigation">
+  <a href=<%= group_purchases_path %> id="back-btn"><i class="fa-solid fa-arrow-left"></i></a>
+  <h2>Detail</h2>
+  <a href="#"></a>
+</header>
 
-<%= render @purchase %>
-
-<div>
-  <%= link_to "Edit this purchase", edit_group_purchase_path(@purchase) %> |
-  <%= link_to "Back to purchases", group_purchases_path %>
-
-  <%= button_to "Destroy this purchase", @purchase, method: :delete %>
-</div>
+<div class="detail"><%= render @purchase %></div>

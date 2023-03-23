@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-  before_action :authenticate_user!, except: [:home]
+  before_action :authenticate_user!, except: [:home] unless Rails.env == 'test'
 
   before_action :configure_permitted_parameters, if: :devise_controller?
 

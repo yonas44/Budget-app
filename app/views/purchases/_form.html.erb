@@ -13,8 +13,12 @@
 
   <div class="input-fields">
     <%= form.text_field :name, placeholder: 'Name of the item..', class: "links links_with_border", :required => true %>
+    
+    <%= form.text_field :reciever, placeholder: 'To:', class: "links links_with_border", :required => true %>
 
     <%= form.number_field :amount, placeholder: 'Amount in USD', class: "links links_with_border", min: 0, :required => true %>
+    
+    <%= form.text_area :description, placeholder: 'Description..', class: "links links_with_border", :required => true %>
   </div>
 
   <div>

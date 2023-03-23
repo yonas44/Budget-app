@@ -13,7 +13,7 @@
   <div class="purchases-wrapper">
     <div id="purchases">
       <% @group.ordered_purchases.each do |purchase| %>
-        <a href="#" id="purchase-links"><%= render purchase %></a>
+        <a href=<%= group_purchase_path(@group, purchase) %> id="purchase-links"><%= render purchase %></a>
       <% end %>
     </div>
   </div>

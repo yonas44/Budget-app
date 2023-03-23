@@ -3,7 +3,7 @@ class GroupsController < ApplicationController
 
   # GET /groups or /groups.json
   def index
-    groups = Group.includes(:purchases).all.order(created_at: :desc)
+    groups = Group.includes(:purchases).where(user: current_user).order(created_at: :desc)
     limit = 3
     limit = nil if request.env['PATH_INFO'].include? 'all'
     @groups = groups.limit(limit)

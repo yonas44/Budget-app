@@ -6,6 +6,4 @@ Rails.application.routes.draw do
   resources :groups, only: %i[index create new update all] do
     resources :purchases, only: %i[index create new show]
   end
-  resources :users
-
 end

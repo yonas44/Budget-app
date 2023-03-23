@@ -14,11 +14,11 @@
       <% end %>
     </div>
   </div>
+  <% if request.env['PATH_INFO'].include? 'all' %>
+    <a href= <%= groups_path %>  id="all-categories-link">Show less</a>
+  <% else %>
+    <a href= <%= groups_all_path %>  id="all-categories-link">Show all</a>
+  <%end%>
 <% end %>
-<% if request.env['PATH_INFO'].include? 'all' %>
-  <a href= <%= groups_path %>  id="all-categories-link">Show less</a>
-<% else %>
-  <a href= <%= groups_all_path %>  id="all-categories-link">Show all</a>
-<%end%>
 
 <%= link_to "New category", new_group_path, id: "new-category-btn" %>
