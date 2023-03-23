@@ -432,7 +432,7 @@ header {
       border-bottom: 1px solid rgb(245, 245, 245);
       justify-content: space-between;
     }
-    
+
     #created-date {
       font-size: 0.7rem;
       color: gray;
@@ -448,11 +448,48 @@ header {
   margin: 0 auto;
   position: relative;
   padding: 10px;
-
 }
 
 .detail {
-  width: 50%;
+  width: 80%;
+  height: 40vh;
+  background-color: white;
+  color: initial;
+  border-radius: 5px;
+  margin: 0 auto;
+  position: relative;
+  padding: 10px;
+
+  .dl {
+    border-bottom: 1px solid lightgrey;
+  }
+
+  .description {
+    padding: 10px;
+    color: gray;
+  }
+
+  .reciever-info {
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    #reciever {
+      font-size: 1.1rem;
+    }
+
+    .created-date {
+      color: gray;
+      font-size: 0.8rem;
+    }
+  }
+
+  .price {
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 footer {
@@ -500,5 +537,9 @@ footer {
   .add-purchase-wrapper,
   .purchases-wrapper {
     width: 50%;
+  }
+
+  .detail {
+    width: 500px;
   }
 }

@@ -35,6 +35,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_20_121312) do
   create_table "purchases", force: :cascade do |t|
     t.string "name"
     t.float "amount"
+    t.string "reciever"
     t.string "description"
     t.bigint "author_id", null: false
     t.datetime "created_at", null: false

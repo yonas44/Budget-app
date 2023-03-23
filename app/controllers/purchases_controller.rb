@@ -7,12 +7,15 @@ class PurchasesController < ApplicationController
   end
 
   # GET /purchases/1 or /purchases/1.json
-  def show; end
+  def show
+    @group = params[:group_id]
+  end
 
   # GET /purchases/new
   def new
     @purchase = Purchase.new
     @groups = []
+    @group = params[:group_id]
     groups = Group.where(id: params[:group_id])
     groups.each do |group|
       @groups << [group.name, group.id]
@@ -24,7 +27,9 @@ class PurchasesController < ApplicationController
 
   # POST /purchases or /purchases.json
   def create
-    purchase = Purchase.create(name: purchase_params[:name], amount: purchase_params[:amount], author: current_user)
+    purchase = Purchase.create(name: purchase_params[:name], amount: purchase_params[:amount],
+                               reciever: purchase_params[:reciever], description: purchase_params[:description],
+                               author: current_user)
     purchase_group = PurchaseGroup.create(group_id: purchase_params[:group], purchase_id: purchase.id)
 
     respond_to do |format|
