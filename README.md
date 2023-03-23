@@ -171,9 +171,10 @@ Example:
 ## 🔭 Future Features <a name="future-features"></a>
 
 
-- [ ] **[new_feature_1]**
-- [ ] **[new_feature_2]**
-- [ ] **[new_feature_3]**
+- Allow user to edit their profile.
+- Allow user to edit a group/ category.
+- Add income registering feature.
+- Add
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

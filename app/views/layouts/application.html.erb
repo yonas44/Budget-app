@@ -11,6 +11,18 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="app">
+      <% flash.each do |key, value| %>
+        <div class="alert <%= key %>">
+          <%= value %>
+        </div>
+        <% end %>
+    
+      <%= yield %>
+      <% if user_signed_in? %>
+        <%= button_to "Logout", destroy_user_session_path, method: :delete, id: "destroy-session" %>
+      <% end %>
+      <footer>Created by Yonas Tesfu &copy 2023</footer>
+    </div>
   </body>
 </html>
