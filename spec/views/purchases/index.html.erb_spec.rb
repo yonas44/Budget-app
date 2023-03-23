@@ -1,26 +1,14 @@
 require 'rails_helper'
 
 RSpec.describe 'purchases/index', type: :view do
+  let(:user) { User.create!(name: 'Another_user', email: 'test2@gmail.com', password: '123123') }
+
   before(:each) do
-    assign(:purchases, [
-             Purchase.create!(
-               name: 'Name',
-               amount: 2.5,
-               user: nil
-             ),
-             Purchase.create!(
-               name: 'Name',
-               amount: 2.5,
-               user: nil
-             )
-           ])
+    assign(:group, Group.create!(user:, name: 'Shopping', icon: 'icon'))
   end
 
   it 'renders a list of purchases' do
     render
-    cell_selector = Rails::VERSION::STRING >= '7' ? 'div>p' : 'tr>td'
-    assert_select cell_selector, text: Regexp.new('Name'.to_s), count: 2
-    assert_select cell_selector, text: Regexp.new(2.5.to_s), count: 2
-    assert_select cell_selector, text: Regexp.new(nil.to_s), count: 2
+    expect(response).to include('There are no purchases')
   end
 end

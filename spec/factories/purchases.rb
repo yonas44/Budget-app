@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :purchase do
-    name { 'MyString' }
+    name { 'Shoe' }
     amount { 1.5 }
-    user { nil }
+    user { FactoryBot.build(:user) }
   end
 end

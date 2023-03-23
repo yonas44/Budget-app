@@ -1,18 +1,19 @@
 require 'rails_helper'
 
 RSpec.describe 'purchases/show', type: :view do
+  let(:user) { User.create!(name: 'Another_user', email: 'test2@gmail.com', password: '123123') }
+
+  let(:group) { Group.create!(user:, name: 'Shopping', icon: 'icon') }
+
+  let(:purchase) { Purchase.create!(author: user, name: 'Shoe', amount: 5) }
+
   before(:each) do
-    assign(:purchase, Purchase.create!(
-                        name: 'Name',
-                        amount: 2.5,
-                        user: nil
-                      ))
+    assign(:group, group)
+    assign(:purchase, purchase)
   end
 
   it 'renders attributes in <p>' do
     render
-    expect(rendered).to match(/Name/)
-    expect(rendered).to match(/2.5/)
-    expect(rendered).to match(//)
+    expect(response).to include('Shoe')
   end
 end

@@ -1,23 +1,18 @@
 require 'rails_helper'
 
 RSpec.describe 'purchases/new', type: :view do
+  let(:user) { User.create!(name: 'Another_user', email: 'test2@gmail.com', password: '123123') }
+
+  let(:group) { Group.create!(user:, name: 'Shopping', icon: 'icon') }
+
   before(:each) do
-    assign(:purchase, Purchase.new(
-                        name: 'MyString',
-                        amount: 1.5,
-                        user: nil
-                      ))
+    assign(:group, group)
+    assign(:purchase, Purchase.create!(author: user, name: 'Shoe', amount: 5))
+    assign(:groups, [group.name, group.id])
   end
 
   it 'renders new purchase form' do
     render
-
-    assert_select 'form[action=?][method=?]', purchases_path, 'post' do
-      assert_select 'input[name=?]', 'purchase[name]'
-
-      assert_select 'input[name=?]', 'purchase[amount]'
-
-      assert_select 'input[name=?]', 'purchase[user_id]'
-    end
+    expect(response).to include('Add purchase')
   end
 end

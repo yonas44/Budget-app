@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :group do
-    name { 'MyString' }
-    icon { 'MyString' }
-    user { nil }
+    name { 'Shopping' }
+    icon { 'Icon_here' }
+    user { build(:user) }
   end
 end
