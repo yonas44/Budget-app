@@ -101,7 +101,7 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
     user_name:     ENV['MAILER_EMAIL'],
     password:      ENV['MAILER_PASSWORD'],
-    domain:        'render.com',
+    domain:        'https://budget-app-o4fw.onrender.com',
     address:       'smtp.gmail.com',
     port:          '587',
     authentication: :plain,
