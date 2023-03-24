@@ -92,6 +92,8 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   # Mailer handler for user registeration
+  config.action_mailer.perform_deliveries = true
+
   config.action_mailer.default_url_options = { host: 'https://budget-app-o4fw.onrender.com' }
 
   config.action_mailer.delivery_method = :smtp
@@ -99,7 +101,7 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
     user_name:     ENV['MAILER_EMAIL'],
     password:      ENV['MAILER_PASSWORD'],
-    domain:        'google.com',
+    domain:        'render.com',
     address:       'smtp.gmail.com',
     port:          '587',
     authentication: :plain,
