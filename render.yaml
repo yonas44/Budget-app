@@ -1,7 +1,7 @@
 databases:
   - name: My_storage_space
     databaseName: my_storage_space_rvfv
-    user: my_storage_space_1lik_user
+    user: my_storage_space_rvfv_user
 
 services:
   - type: web
