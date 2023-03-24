@@ -136,6 +136,12 @@ To run the project, execute the following command:
   rails server 
 ```
 
+- NOTE: In the `development.rb` file, make sure to provide a working `email` to the user_name section and `password` generated from your email provider to have the project working, or you can follow this steps to skip the validation:
+1. Remove or comment the `:confirmable` from the `User.rb` devise options.
+2. Comment line[76 - 86] from the `development.rb`, which is handling the email comfirmation.
+3. Start your server and try again.
+
+
 ### Run tests
 
 To run tests, run the following command:
