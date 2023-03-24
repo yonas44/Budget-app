@@ -31,6 +31,8 @@ gem 'rubocop', '>= 1.0', '< 2.0'
 
 gem 'devise'
 
+gem 'letter_opener'
+
 gem 'font-awesome-sass', '~> 6.3.0'
 
 # Use Redis adapter to run Action Cable in production
@@ -65,6 +67,10 @@ group :development, :test do
   gem 'factory_bot_rails', '~> 6.1.0'
 
   gem 'database_cleaner'
+
+  gem 'selenium-webdriver'
+
+  gem 'webdrivers'
 end
 
 group :development do

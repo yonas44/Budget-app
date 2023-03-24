@@ -131,6 +131,8 @@ To run the project, execute the following command:
 
 
 ```
+  rails db:create db:migrate
+
   rails server 
 ```
 
@@ -144,15 +146,7 @@ To run tests, run the following command:
 
 ### Deployment
 
-You can deploy this project using:
-
-<!--
-Example:
-
-```sh
-
-```
- -->
+- You can deploy this project on render using this [link](https://render.com/docs/deploy-rails)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -171,10 +165,10 @@ Example:
 ## 🔭 Future Features <a name="future-features"></a>
 
 
-- Allow user to edit their profile.
-- Allow user to edit a group/ category.
-- Add income registering feature.
-- Add
+- [] Allow user to edit their profile.
+- [] Allow user to edit a group/ category.
+- [] Add income registering feature.
+- [] Add algorithm to take income, cost and user saving goal and give suggestion.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
