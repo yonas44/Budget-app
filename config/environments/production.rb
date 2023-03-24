@@ -94,7 +94,7 @@ Rails.application.configure do
   # Mailer handler for user registeration
   config.action_mailer.perform_deliveries = true
 
-  config.action_mailer.default_url_options = { host: 'https://budget-app-o4fw.onrender.com' }
+  config.action_mailer.default_url_options = { host: 'https://budget-app-385w.onrender.com' }
 
   config.action_mailer.delivery_method = :smtp
 
