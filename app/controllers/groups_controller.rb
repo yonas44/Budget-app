@@ -1,6 +1,5 @@
 class GroupsController < ApplicationController
   before_action :set_group, only: %i[show edit update destroy]
-  skip_before_action :verify_authenticity_token if Rails.env == 'test'
 
   # GET /groups or /groups.json
   def index

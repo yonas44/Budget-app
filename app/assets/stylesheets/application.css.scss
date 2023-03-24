@@ -165,7 +165,10 @@ header {
 .signup-wrapper {
   background-color: lightgray;
   width: 100%;
+  border-radius: 20px;
   height: 100%;
+  padding-bottom: 10px;
+  text-align: center;
 
   #login-btn {
     text-decoration: none;
@@ -189,6 +192,7 @@ header {
   flex-direction: column;
   gap: 20px;
   width: 100%;
+  border-radius: 20px;
 
   .login-form {
     display: flex;

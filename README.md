@@ -131,8 +131,16 @@ To run the project, execute the following command:
 
 
 ```
+  rails db:create db:migrate
+
   rails server 
 ```
+
+- NOTE: In the `development.rb` file, make sure to provide a working `email` to the user_name section and `password` generated from your email provider to have the project working, or you can follow this steps to skip the validation:
+1. Remove or comment the `:confirmable` from the `User.rb` devise options.
+2. Comment line[76 - 86] from the `development.rb`, which is handling the email comfirmation.
+3. Start your server and try again.
+
 
 ### Run tests
 
@@ -144,15 +152,7 @@ To run tests, run the following command:
 
 ### Deployment
 
-You can deploy this project using:
-
-<!--
-Example:
-
-```sh
-
-```
- -->
+- You can deploy this project on render using this [link](https://render.com/docs/deploy-rails)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -171,10 +171,10 @@ Example:
 ## 🔭 Future Features <a name="future-features"></a>
 
 
-- Allow user to edit their profile.
-- Allow user to edit a group/ category.
-- Add income registering feature.
-- Add
+- [] Allow user to edit their profile.
+- [] Allow user to edit a group/ category.
+- [] Add income registering feature.
+- [] Add algorithm to take income, cost and user saving goal and give suggestion.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
