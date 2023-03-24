@@ -56,6 +56,8 @@ After you're finished please remove all the comments and instructions!
 
 This is an app that allows users to track their budget by keeping track of their transactions based on different catagories specified by the user.
 
+- You can find a video description of my project [here](https://drive.google.com/file/d/1_-idt9VCLpIjtdjo4HCwYLmtRiRmc-Yb/view?usp=sharing)
+
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
@@ -93,12 +95,12 @@ This is an app that allows users to track their budget by keeping track of their
 
 <!-- LIVE DEMO -->
 
-<!-- ## 🚀 Live Demo <a name="live-demo"></a>
+## 🚀 Live Demo <a name="live-demo"></a>
 
 
-- [Live Demo Link](https://google.com)
+- [Live Demo Link](https://budget-app-0rul.onrender.com)
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p> -->
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
 
@@ -120,7 +122,7 @@ Clone this repository to your desired folder:
 ```
   git clone git@github.com:yonas44/budget-app.git
 
-  cd blog-app
+  cd budget-app
 
   bundle install
 ```
@@ -147,7 +149,7 @@ To run the project, execute the following command:
 To run tests, run the following command:
 
 ```
-  rspec
+  rspec --format documentation
 ```
 
 ### Deployment
