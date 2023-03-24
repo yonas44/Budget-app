@@ -92,6 +92,8 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   # Mailer handler for user registeration
+  config.action_mailer.default_url_options = { host: 'https://budget-app-o4fw.onrender.com' }
+
   config.action_mailer.delivery_method = :smtp
 
   config.action_mailer.smtp_settings = {
