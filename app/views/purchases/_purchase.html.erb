@@ -1,0 +1,11 @@
+<div class="single-purchase" >
+
+  <p id="purchase-top-section">
+    <span><%= purchase.name%></span>
+    <span id="price"><strong>$<%= purchase.amount %></strong></span>
+  </p>
+
+  <p>
+    <span id="created-date"><%= purchase.created_at.to_s.split(' ')[0]%></span>
+  </p>
+</div>

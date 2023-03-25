@@ -1,0 +1,24 @@
+<header class="categories-nav">
+  <h2>Categories</h2>
+</header>
+<div class="groups-cost-wrapper">
+  <span>Overall purchases: <strong>$<%= @total %></strong></span>
+</div>
+<% if @groups.empty? %>
+  <p class="no-content-msg"><%= image_tag ("no-content.png"), id: 'no-content-img' %>There are no categories added currently</p>
+<% else %>
+  <div class="categories-wrapper">
+    <div id="categories">
+      <% @groups.each do |group| %>
+        <a href= <%= group_purchases_path(group) %> class="category-card"><%= render group %></a>
+      <% end %>
+    </div>
+  </div>
+  <% if request.env['PATH_INFO'].include? 'all' %>
+    <a href= <%= groups_path %>  id="all-categories-link">Show less</a>
+  <% else %>
+    <a href= <%= groups_all_path %>  id="all-categories-link">Show all</a>
+  <%end%>
+<% end %>
+
+<%= link_to "New category", new_group_path, id: "new-category-btn" %>

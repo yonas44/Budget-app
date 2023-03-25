@@ -1,0 +1,29 @@
+<div class="login-wrapper">
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: {class: "login-form"}) do |f| %>
+    <div class="actions">
+      <a href=<%= root_path %> id="back-btn"><i class="fa-solid fa-arrow-left"></i></a>
+      <h2>Log in</h2>
+      <%= f.button type: :submit, class: 'submit-btn' do %>
+        <i class="fas fa-right-to-bracket"></i> Login
+      <% end %>
+    </div>
+  
+    <div class="input-fields">
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email", class: "links links_with_border" %>
+  
+      <%= f.password_field :password, autocomplete: "current-password", placeholder: "Password", class: "links" %>
+    </div>
+  
+    <% if devise_mapping.rememberable? %>
+      <div class="field">
+        <%= f.check_box :remember_me %>
+        <%= f.label :remember_me %>
+      </div>
+    <% end %>
+  
+  <% end %>
+  
+  <div class="options">
+  <p>A new user?</p>
+  <%= render "devise/shared/links" %></div>
+</div>

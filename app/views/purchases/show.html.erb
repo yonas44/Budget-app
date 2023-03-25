@@ -1,0 +1,15 @@
+<header class="navigation">
+  <a href=<%= group_purchases_path(@group) %> id="back-btn"><i class="fa-solid fa-arrow-left"></i></a>
+  <h2>Detail</h2>
+  <a href="#"></a>
+</header>
+
+<div class="detail">
+  <h2 class=""><%= @purchase.name%></h2>
+  <p class="description dl"><%= @purchase.description%></p>
+  <div class="reciever-info dl">
+    <p id="reciever">Reciever: <%= @purchase.reciever%></p>
+    <p class="created-date"><%= @purchase.created_at%></p>
+  </div>
+  <p class="price"><span>TOTAL PAYMENT</span><strong>$<%= @purchase.amount %></strong></p>
+</div>
