@@ -3,7 +3,9 @@
     <div class="actions">
       <a href=<%= root_path %> id="back-btn"><i class="fa-solid fa-arrow-left"></i></a>
       <h2>Log in</h2>
-      <%= f.submit "Log in", class: 'submit-btn' %>
+      <%= f.button type: :submit, class: 'submit-btn' do %>
+        <i class="fas fa-right-to-bracket"></i> Login
+      <% end %>
     </div>
   
     <div class="input-fields">
@@ -22,5 +24,6 @@
   <% end %>
   
   <div class="options">
+  <p>A new user?</p>
   <%= render "devise/shared/links" %></div>
 </div>

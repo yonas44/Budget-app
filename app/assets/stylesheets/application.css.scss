@@ -55,6 +55,7 @@
   text-align: center;
   font-size: 14px;
   padding: 20px;
+  visibility: hidden;
   animation: slide-down 2s alternate;
   z-index: 3;
 }
@@ -62,6 +63,7 @@
 @keyframes slide-down {
   100% {
     left: 0;
+    visibility: visible;
   }
 
   40% {
@@ -106,7 +108,9 @@
   .submit-btn {
     background: transparent;
     border: none;
-    padding: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 5px 10px;
     color: white;
   }
 }
@@ -160,6 +164,20 @@ header {
   border-bottom-right-radius: 10px;
 }
 
+.user-other-options {
+  background-color: #3778c2;
+  padding: 40px;
+  border-radius: 20px;
+  margin: auto;
+  color: white;
+
+  .input-field {
+    border: none;
+    margin: 10px 0;
+    padding: 5px;
+  }
+}
+
 // Sign Up
 
 .signup-wrapper {
@@ -198,26 +216,33 @@ header {
     display: flex;
     flex-direction: column;
   }
+}
 
-  .options {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: 10px;
+.options {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
 
-    #sign-up-btn {
-      text-decoration: none;
-      color: white;
-      border-radius: 10px;
-      width: fit-content;
-      padding: 10px 20px;
-      background-color: #5fb523;
-    }
+  #sign-up-btn,
+  #login-btn {
+    text-decoration: none;
+    color: white;
+    border-radius: 10px;
+    width: fit-content;
+    padding: 10px 20px;
+    background-color: #5fb523;
+  }
 
-    #forgot-password-link {
-      text-decoration: none;
-      color: gray;
-    }
+  #login-btn {
+    background-color: white;
+    margin-top: 10px;
+    color: black;
+  }
+
+  #forgot-password-link {
+    text-decoration: none;
+    color: white;
   }
 }
 

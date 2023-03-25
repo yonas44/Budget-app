@@ -56,7 +56,7 @@ After you're finished please remove all the comments and instructions!
 
 This is an app that allows users to track their budget by keeping track of their transactions based on different catagories specified by the user.
 
-- You can find a video description of my project [here](https://drive.google.com/file/d/1_-idt9VCLpIjtdjo4HCwYLmtRiRmc-Yb/view?usp=sharing)
+- You can find a video description of my project [here](https://drive.google.com/file/d/1xbVPxj6ZJD0J9ZUqF2gmPM1-wyGxvVsE/view?usp=sharing)
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -173,10 +173,10 @@ To run tests, run the following command:
 ## 🔭 Future Features <a name="future-features"></a>
 
 
-- [] Allow user to edit their profile.
-- [] Allow user to edit a group/ category.
-- [] Add income registering feature.
-- [] Add algorithm to take income, cost and user saving goal and give suggestion.
+- Allow user to edit their profile.
+- Allow user to edit a group/ category.
+- Add income registering feature.
+- Add algorithm to take income, cost and user saving goal and give suggestion.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
