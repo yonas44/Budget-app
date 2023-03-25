@@ -42,7 +42,7 @@ RSpec.describe 'Groups', type: :system do
       fill_in 'user[password_confirmation]', with: 'password'
 
       sleep(1)
-      click_on 'Next'
+      click_on 'Signup'
 
       # click on a button from the displayed page
       sleep(1)
